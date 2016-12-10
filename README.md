@@ -10,4 +10,19 @@ A simple tools for router maintain.
 
 ## Requirements
 
+# Development Guide
+
+```
+virtualenv .env
+. .env/bin/activate
+pip install -U pip
+cat <<EOF > .env/pip.conf
+[list]
+format=columns
+EOF
+pip install -U virtualenvwrapper
+pip install -U pytest-cov
+pip freeze > requirements.txt
+```
+
 # Licence
