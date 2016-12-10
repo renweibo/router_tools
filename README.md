@@ -57,7 +57,7 @@ bumpversion patch
 python setup.py sdist upload
 python setup.py bdist_wheel upload
 
-make -C docs html
+make -C docs html; open docs/build/html/index.html
 ```
 
 # Licence
