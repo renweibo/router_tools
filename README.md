@@ -22,6 +22,7 @@ format=columns
 EOF
 pip install -U virtualenvwrapper
 pip install -U pytest-cov
+pip install -U tox
 pip freeze > requirements.txt
 ```
 
