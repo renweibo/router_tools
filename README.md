@@ -31,6 +31,9 @@ pip install -U Sphinx
 pip install -U recommonmark
 pip freeze > requirements.txt
 sphinx-quickstart
+
+git flow init
+git push -u origin develop
 ```
 
 ## Development env setup - new machine
