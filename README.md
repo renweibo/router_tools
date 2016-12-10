@@ -56,6 +56,8 @@ sphinx-apidoc -F -o docs_api router_tools
 make -C docs_api html; open docs_api/build/html/index.html
 
 bumpversion patch
+git status
+git push
 python setup.py sdist upload
 python setup.py bdist_wheel upload
 
