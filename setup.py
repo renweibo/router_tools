@@ -12,7 +12,7 @@ setuptools.setup(
     author_email="renweibo@gmail.com",
 
     description="A simple tool for router maintain.",
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
 
     packages=setuptools.find_packages(),
 
