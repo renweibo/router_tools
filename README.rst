@@ -1,7 +1,8 @@
 router\_tools
 =============
 
-|Latest PyPI version| |Latest Travis CI build status|
+|Latest PyPI version| |Latest Travis CI build status| |Documentation
+Status|
 
 A simple tools for router maintain.
 
@@ -75,3 +76,5 @@ Licence
    :target: https://pypi.python.org/pypi/router_tools
 .. |Latest Travis CI build status| image:: https://travis-ci.org/renweibo/router_tools.png
    :target: https://travis-ci.org/renweibo/router_tools
+.. |Documentation Status| image:: https://readthedocs.org/projects/router-tools/badge/?version=latest
+   :target: http://router-tools.readthedocs.io/en/latest/?badge=latest
