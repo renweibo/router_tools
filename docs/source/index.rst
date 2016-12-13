@@ -3,13 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to router_tools's documentation!
+Welcome to router_tools!
 ========================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+router_tools is a simple tool for router maintain.
 
 
 Indices and tables

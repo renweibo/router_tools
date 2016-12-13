@@ -3,6 +3,7 @@ htmlcov/
 .env/
 .env3/
 *.py[cod]
+.idea
 
 # C extensions
 *.so

@@ -1,6 +1,9 @@
 import setuptools
 import router_tools
-import io, sys, os, codecs
+# import io
+# import sys
+# import os
+# import codecs
 
 setuptools.setup(
     name="router_tools",
