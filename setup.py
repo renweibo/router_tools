@@ -14,12 +14,13 @@ setuptools.setup(
     author="Ren Weibo",
     author_email="renweibo@gmail.com",
 
-    description="A simple tool for router maintain.",
+    description="Simple tool for router maintain.",
     long_description=open('README.rst').read(),
 
     packages=setuptools.find_packages(),
 
     install_requires=[],
+    scripts=['router_tools/dns_query.py'],
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',

@@ -10,7 +10,7 @@ Welcome to router_tools!
    :maxdepth: 2
    :caption: Contents:
 
-router_tools is a simple tool for router maintain.
+router_tools are simple tools for router maintain.
 
 
 Indices and tables

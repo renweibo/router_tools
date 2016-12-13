@@ -4,7 +4,7 @@
 [![Documentation Status](https://readthedocs.org/projects/router-tools/badge/?version=latest)](http://router-tools.readthedocs.io/en/latest/?badge=latest)
 
 
-A simple tools for router maintain.
+Simple tools for router maintain.
 
 # Usage
 
