@@ -46,25 +46,8 @@ pip install -r requirements.txt --use-mirrors
 ## Relase
 
 ```
-pandoc -o README.rst -i README.md
-pip freeze > requirements.txt
-
-. .env/bin/activate
-python setup.py develop
-py.test
-git commit -a -m "messages for update"
-
-rm docs_api/*.rst
-sphinx-apidoc -F -o docs_api router_tools
-make -C docs_api html; open docs_api/build/html/index.html
-
-bumpversion patch
-git status
-git push
-python setup.py sdist upload
-python setup.py bdist_wheel upload
-
-make -C docs html; open docs/build/html/index.html
+make all
+make release
 ```
 
 # Licence

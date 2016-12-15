@@ -1,13 +1,27 @@
 import click
+import socket
+import logging
+
+logging.basicConfig()
+
 
 @click.command()
-@click.option('--count', default=1, help='Number of greetings.')
-@click.option('--name', prompt='Your name',
-              help='The person to greet.')
-def hello(count, name):
-    """Simple program that greets NAME for a total of COUNT times."""
-    for x in range(count):
-        click.echo('Hello %s!' % name)
+@click.option('--name', prompt='Domain name',
+              help='The domain you want to query.')
+def simple(name):
+    """Simple query for domain."""
+    logger = logging.getLogger('dns_query')
+    logger.warning(simple_impl(name))
+
+
+def simple_impl(domain):
+    """Simple query domain name by using python module."""
+    logger = logging.getLogger('dns_query')
+    logger.warning("Query domain:" + domain)
+    ips = socket.gethostbyname_ex(domain)[2]
+    logger.warning(ips)
+    return ips
+
 
 if __name__ == '__main__':
-    hello()
+    simple()

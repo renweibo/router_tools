@@ -3,7 +3,8 @@ htmlcov/
 .env/
 .env3/
 *.py[cod]
-.idea
+.idea/
+.cache/
 
 # C extensions
 *.so
@@ -12,7 +13,7 @@ htmlcov/
 *.egg
 *.egg-info
 dist
-build
+build/
 eggs
 parts
 bin
@@ -39,3 +40,4 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+/docs_api/
