@@ -16,21 +16,33 @@ apidoc:
 	@make -C docs_api html; open docs_api/build/html/index.html
 
 test:
-	@. .env/bin/activate
-	@python setup.py develop
-	@py.test
+	@source `which virtualenvwrapper.sh`; workon env; python setup.py develop;py.test
 
-feature_end:
-	@pip freeze > requirements_dev.txt
+feature_end: doc apidoc
+	#@pip freeze > requirements_dev.txt
 	@git commit -a -m "messages for update"
 	@bumpversion patch
 	@git status
 	@git flow feature finish `git flow feature | cut -f 2 -d " "`
 	@git push
 	@git push --tags
+	@git checkout master
+	@git push
+	@git checkout develop
+
+hotfix_end: doc apidoc
+	@git commit -a -m "messages for hotfix"
+	@bumpversion patch
+	@git status
+	@git flow feature finish `git flow hotfix | cut -f 2 -d " "`
+	@git push
+	@git push --tags
+	@git checkout master
+	@git push
+	@git checkout develop
 
 release_start:
-	@git flow release start v`grep current_version .bumpversion.cfg | cut -d " " -f 3`
+	@git flow release start `grep current_version .bumpversion.cfg | cut -d " " -f 3`
 
 release_finish:
-	@git flow release finish v`grep current_version .bumpversion.cfg | cut -d " " -f 3`
+	@git flow release finish `grep current_version .bumpversion.cfg | cut -d " " -f 3`
