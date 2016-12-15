@@ -3,7 +3,7 @@ all: apidoc doc test
 
 pip:
 	@python setup.py sdist upload
-	@python setup.py bdist_wheel upload
+	@workon env; python setup.py bdist_wheel upload
 	@workon env3; python setup.py bdist_wheel upload
 
 doc:
