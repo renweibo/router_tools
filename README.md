@@ -14,33 +14,12 @@ Simple tools for router maintain.
 
 # Development Guide
 
-## Development env setup - bootstrap
-
-```
-virtualenv .env
-. .env/bin/activate
-pip install -U pip
-cat <<EOF > .env/pip.conf
-[list]
-format=columns
-EOF
-pip install -U virtualenvwrapper
-pip install -U pytest-cov
-pip install -U tox
-pip install -U Sphinx
-pip install -U recommonmark
-pip freeze > requirements.txt
-sphinx-quickstart
-
-git flow init
-git push -u origin develop
-```
 
 ## Development env setup - new machine
 
 ```
 . .env/bin/activate
-pip install -r requirements.txt --use-mirrors
+pip install -r requirements_dev.txt
 ```
 
 ## Relase
