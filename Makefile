@@ -2,9 +2,9 @@ all: apidoc doc test
 	@echo hello
 
 pip:
-	@pip freeze > requirements.txt
 	@python setup.py sdist upload
-	@python setup.py bdist_wheel upload
+	@source `which virtualenvwrapper.sh`; workon env; python setup.py bdist_wheel upload
+	@source `which virtualenvwrapper.sh`; workon env3; python setup.py bdist_wheel upload
 
 doc:
 	@pandoc -o README.rst -i README.md
@@ -21,6 +21,7 @@ test:
 	@py.test
 
 feature_end:
+	@pip freeze > requirements_dev.txt
 	@git commit -a -m "messages for update"
 	@bumpversion patch
 	@git status
