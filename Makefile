@@ -3,8 +3,8 @@ all: apidoc doc test
 
 pip:
 	@python setup.py sdist upload
-	@workon env; python setup.py bdist_wheel upload
-	@workon env3; python setup.py bdist_wheel upload
+	@source `which virtualenvwrapper.sh`; workon env; python setup.py bdist_wheel upload
+	@source `which virtualenvwrapper.sh`; workon env3; python setup.py bdist_wheel upload
 
 doc:
 	@pandoc -o README.rst -i README.md
